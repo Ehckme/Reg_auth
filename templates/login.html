@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign up</title>
+    <title> login </title>
 </head>
 <body>
 
-    <h1> Sign up </h1>
+    <h1> Login </h1>
 
-    <form method="post" action="/" autocomplete="on">
+    <form method="post" action="{{ url_for('login') }}" autocomplete="on">
 
         <input type="email" id="email" name="email" maxlength="40"
                placeholder="email" required><br><br>
@@ -16,7 +16,7 @@
         <input type="password" id="password" name="password" maxlength="64" min="6"
                placeholder="password" required><br><br>
 
-        <input type="submit" value="Sign up"><br><br>
+        <input type="submit" value=" Login "><br><br>
     </form>
 
 </body>
