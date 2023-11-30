@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Sign up</title>
+    <title> password reset </title>
     <style>
 
         input[type=email], select {
@@ -16,16 +16,6 @@
         }
 
         input[type=password], select {
-          width: 100%;
-          padding: 12px 20px;
-          margin: 8px 0;
-          display: inline-block;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          box-sizing: border-box;
-        }
-
-        input[type=text], select {
           width: 100%;
           padding: 12px 20px;
           margin: 8px 0;
@@ -59,21 +49,17 @@
 </head>
 <body>
 
-    <h1> Sign up </h1>
+    <h1> Recover account </h1>
 
     <div>
+        <p> Enter the email that you used to register your account with. </p>
 
-        <form method="post" action="/sign_up" autocomplete="on">
-        <input type="text" id="username" name="username" maxlength="40"
-               placeholder="username" autofocus required><br><br>
+        <form method="post" action="{{ url_for('account_recovery') }}" autocomplete="on">
 
         <input type="email" id="email" name="email" maxlength="40"
-               placeholder="email" required><br><br>
+               placeholder="enter your email" required><br><br>
 
-        <input type="password" id="password" name="password" maxlength="64" min="6"
-               placeholder="password" required><br><br>
-
-        <input type="submit" value="Sign up"><br><br>
+        <input type="submit" value="Next"><br><br>
     </form>
 
         <form method="get" action="{{ url_for('login') }}" >
