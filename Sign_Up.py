@@ -4,12 +4,18 @@ from flask import Flask
 from flask import render_template, url_for, session
 from flask import request, redirect
 from sqlalchemy import String, Integer, CHAR
+<<<<<<< HEAD
 from sqlalchemy import create_engine
+=======
+from sqlalchemy import create_engine, select
+>>>>>>> 295c9529c02880ca50f2bb4a3b2838c41d16412d
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
 from sqlalchemy.orm import Session, sessionmaker
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.types import Boolean
+import dns.resolver
 
 import dns.resolver
 
