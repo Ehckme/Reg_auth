@@ -11,7 +11,6 @@
             {% for message in messages %}
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     {{ message }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div><br/><br/>
             {% endfor %}
         {% endif %}
@@ -22,7 +21,7 @@
 
         <form method="post" action="/otp_reset" autocomplete="on">
         <input type="text" id="otp" name="otp" maxlength="4"
-               placeholder="Enter OTP in email" autofocus required><br><br>
+               placeholder="Enter OTP in email here" autofocus required><br><br>
         <input type="submit" value="Submit"><br><br>
         </form>
 

@@ -5,6 +5,17 @@
 {% endblock  %}
 
 {% block content %}
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    {{ message }}
+
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
     <h1> Recover account </h1>
 
     <div>
@@ -20,7 +31,7 @@
 
         <form method="get" action="{{ url_for('login') }}" >
 
-            <p> Already have an account? <a href="{{ url_for('login') }}"> LOGIN  </a></p><br>
+            <p> Already have an account? <a href="{{ url_for('login') }}"> Login  </a></p><br>
 
         </form>
 

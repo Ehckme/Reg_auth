@@ -11,7 +11,7 @@
             {% for message in messages %}
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     {{ message }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
                 </div>
             {% endfor %}
         {% endif %}
@@ -35,7 +35,7 @@
 
         <form method="get" action="{{ url_for('sign_up') }}" >
 
-            <p> Don't have an account? <a href="{{ url_for('sign_up') }}"> SIGN UP  </a></p><br>
+            <p> Don't have an account? <a href="{{ url_for('sign_up') }}"> Sign up  </a></p><br>
 
         </form>
         <form method="get" action="{{ url_for('account_recovery') }}" >
